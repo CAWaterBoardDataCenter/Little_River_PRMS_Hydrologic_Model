@@ -1,0 +1,130 @@
+
+
+
+                         U.S. Geological Survey
+               Precipitation-Runoff Modeling System (PRMS)
+                        Version 5.2.0 01/20/2021
+
+        Process            Available Modules
+--------------------------------------------------------------------
+  Basin Definition: basin
+    Cascading Flow: cascade
+  Time Series Data: obs, water_use_read, dynamic_param_read
+   Potet Solar Rad: soltab
+  Temperature Dist: temp_1sta, temp_laps, temp_dist2, climate_hru,
+                    temp_map
+       Precip Dist: precip_1sta, precip_laps, precip_dist2,
+                    climate_hru, precip_map
+Temp & Precip Dist: xyz_dist, ide_dist
+    Solar Rad Dist: ccsolrad, ddsolrad, climate_hru
+Transpiration Dist: transp_tindex, climate_hru, transp_frost
+      Potential ET: potet_hamon, potet_jh, potet_pan, climate_hru,
+                    potet_hs, potet_pt, potet_pm, potet_pm_sta
+      Interception: intcp
+Snow & Glacr Dynam: snowcomp, glacr_melt
+    Surface Runoff: srunoff_smidx, srunoff_carea
+         Soil Zone: soilzone
+       Groundwater: gwflow
+Streamflow Routing: strmflow, strmflow_in_out, muskingum,
+                    muskingum_lake, muskingum_mann
+Stream Temperature: stream_temp
+    Output Summary: basin_sum, subbasin, map_results, prms_summary,
+                    nhru_summary, nsub_summary, water_balance
+                    basin_summary, nsegment_summary
+     Preprocessing: write_climate_hru, frost_date
+--------------------------------------------------------------------
+
+
+    Active modules listed in the order in which they are called
+
+        Process                    Module         Version Date
+==============================================================
+Computation Order               call_modules        2021-01-20
+Basin Definition                basin               2020-12-02
+Cascading Flow                  cascade             2020-12-02
+Common States and Fluxes        climateflow         2021-01-11
+Potential Solar Radiation       soltab              2020-12-02
+Parameter Setup                 setup_param         2020-08-03
+Timestep Control                prms_time           2020-12-02
+Time Series Data                obs                 2020-12-02
+Temperature Distribution        temp_1sta           2020-12-02
+Precipitation Distribution      precip_1sta         2020-12-02
+Solar Radiation Distribution    ddsolrad            2020-12-02
+Transpiration Distribution      transp_tindex       2020-12-02
+Potential Evapotranspiration    potet_jh            2020-08-03
+Canopy Interception             intcp               2020-12-03
+Snow Dynamics                   snowcomp            2021-01-11
+Surface Runoff                  srunoff_smidx       2021-01-11
+Soilzone Computations           soilzone            2021-01-11
+Groundwater                     gwflow              2020-12-02
+Streamflow Routing              strmflow            2020-08-03
+Output Summary                  basin_sum           2020-12-02
+Output Summary                  subbasin            2020-12-02
+Output Summary                  nsub_summary        2020-12-02
+==============================================================
+
+Using Control File: little_river_control_optimization1.control
+
+Using Parameter File: little_river_optimization1_May_to_Sep.params
+
+
+Start time: 1981/10/01 00:00:00
+End time:   2023/06/30 00:00:00
+
+
+Model domain area:        65851.01    Active basin area:     28132.90
+Fraction impervious:        0.0000    Fraction pervious:       1.0000
+
+
+
+
+   Year Month Day   Precip     ET    Storage S-Runoff M-Runoff
+                  (inches) (inches) (inches) (inches) (inches)
+ -------------------------------------------------------------
+ initial                               2.437
+   1982             83.338   14.480    1.430   69.865    0.000
+   1983             94.211   20.366    2.988   72.288    0.000
+   1984             71.558   17.754    1.181   55.610    0.000
+   1985             52.147   14.057    1.693   37.579    0.000
+   1986             64.905   16.598    5.660   44.340    0.000
+   1987             41.592   14.537    0.854   31.860    0.000
+   1988             51.747   16.013    1.341   35.247    0.000
+   1989             58.537   15.438    2.048   42.392    0.000
+   1990             47.172   16.690    1.739   30.791    0.000
+   1991             40.985   15.710    1.543   25.471    0.000
+   1992             34.210   17.221    1.114   17.418    0.000
+   1993             71.422   19.330    1.402   51.804    0.000
+   1994             43.997   15.494    0.993   28.912    0.000
+   1995             79.006   17.360    1.758   60.881    0.000
+   1996             79.361   18.372    1.674   61.073    0.000
+   1997             70.922   20.402    2.555   49.639    0.000
+   1998             79.782   18.713    1.087   62.538    0.000
+   1999             80.214   14.034    0.881   66.385    0.000
+   2000             58.727   16.868    1.210   41.530    0.000
+   2001             36.636   15.648    1.598   20.600    0.000
+   2002             63.116   13.763    1.038   49.913    0.000
+   2003             75.725   14.723    1.106   60.934    0.000
+   2004             58.710   14.403    1.198   44.215    0.000
+   2005             64.161   20.416    1.495   43.448    0.000
+   2006             80.373   15.468    1.093   65.307    0.000
+   2007             56.587   14.681    1.325   41.674    0.000
+   2008             55.969   13.300    0.939   43.056    0.000
+   2009             54.466   15.251    1.212   38.942    0.000
+   2010             72.105   18.977    2.402   51.938    0.000
+   2011             74.048   16.418    1.670   58.362    0.000
+   2012             69.087   18.219    1.655   50.883    0.000
+   2013             58.360   15.904    5.011   39.100    0.000
+   2014             42.091   17.988    3.268   25.846    0.000
+   2015             55.820   16.762    1.286   41.040    0.000
+   2016             78.458   17.360    1.007   61.377    0.000
+   2017            100.718   17.980    1.507   82.239    0.000
+   2018             58.227   17.268    1.255   41.210    0.000
+   2019             73.209   16.516    2.820   55.128    0.000
+   2020             52.582   18.457    1.603   35.343    0.000
+   2021             48.191   13.757    2.250   33.787    0.000
+   2022             50.378   18.909    1.576   32.142    0.000
+ *************************************************************
+ Total for run    2646.239  693.299    2.158 1953.219    0.000
+ *************************************************************
+Execution elapsed time    0 minutes 17.19 seconds
+
